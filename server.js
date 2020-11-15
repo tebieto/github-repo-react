@@ -24,5 +24,6 @@ app.get('*', (req, res) => {
 });
 
 app.post('/api/key/github', (req, res) => {
-	res.send({ key: process.env.GITHUB_API_KEY });
+    const key = process.env.GITHUB_API_KEY;
+    res.send({ key });
 });
