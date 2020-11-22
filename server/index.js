@@ -1,7 +1,10 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const bodyParser = require('body-parser');
 const enforce = require('express-sslify');
+const request = require('request');
+const { GITHUB_API_URL, GITHUB_REQUEST_OPTIONS } = require('./utils');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
@@ -19,11 +22,22 @@ http.listen(port, error => {
     console.log('Server running on port ' + port);
 });
 
-app.get('*', (req, res) => {
-	res.send('Unauthorized');
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+app.get('*', function(req, res) {
+	res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });
 
 app.post('/api/key/github', (req, res) => {
     const key = process.env.GITHUB_API_KEY;
     res.send({ key });
+});
+
+app.post('/api/github/user', (req, res) => {
+    const key = process.env.GITHUB_API_KEY;
+});
+
+
+request(GITHUB_API_URL, GITHUB_REQUEST_OPTIONS, (res, body, error) => {
+    console.log({res, error, body});
 });
