@@ -1,5 +1,5 @@
 import { getLocalTime } from './date.js';
-const API_KEY_URL = 'http://localhost:8000/api/key/github';
+const API_KEY_URL = `${window.location.origin}/api/key/github`;
 const GITHUB_API_URL = 'https://api.github.com/graphql';
 
 
