@@ -1,11 +1,11 @@
-export const getSubHeader = totalCount => `
-    <div id="sub-header">
+const Tab = ({ totalCount }) => (
+    <div id="tab">
         <button>
             <span>Overview</span>
         </button>
-        <button class="active">
-            <span class="description">Repositories</span>
-            <div class="count">${totalCount}</div>
+        <button className="active">
+            <span className="description">Repositories</span>
+            <div className="count">{totalCount}</div>
         </button>
         <button>
             <span>Projects</span>
@@ -14,4 +14,6 @@ export const getSubHeader = totalCount => `
             <span>Packages</span>
         </button>
     </div>
-`
+);
+
+export default Tab;

@@ -1,6 +1,7 @@
-import { API_KEY_URL } from '../config.js';
-import { getLocalTime } from './date.js'
+import { getLocalTime } from './date.js';
+const API_KEY_URL = 'http://localhost:8000/api/key/github';
 const GITHUB_API_URL = 'https://api.github.com/graphql';
+
 
 const queryGithub = maxReposLength => `
 {

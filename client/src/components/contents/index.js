@@ -1,22 +1,21 @@
-import { getContentRight } from './right-contents/index.js';
-import { getContentLeft } from './left-contents/index.js';
-import { getSubHeader } from './sub-header/index.js';
+import RepoSection from '../repo-section';
+import ProfileSection from '../profile-section';
+import Tab from '../Tab';
 
-export const getPageContents = data => `
+const Contents = ({ data }) => (
     <div id="contents">
-        ${
-            // left-contents first
-            getContentLeft(data.userInfo)
+        {
+            <ProfileSection userInfo={data.userInfo} />
         }
 
-        ${
-            // sub-header next
-            getSubHeader(data.totalCount)
+        {
+            <Tab totalCount={data.totalCount} />
         }
 
-        ${
-            // right-content finally
-            getContentRight(data.repos)
+        {
+            <RepoSection repos={data.repos} />
         }
     </div>
-`
+);
+
+export default Contents

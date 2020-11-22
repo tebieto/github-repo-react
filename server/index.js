@@ -3,8 +3,6 @@ const cors = require('cors');
 const path = require('path');
 const bodyParser = require('body-parser');
 const enforce = require('express-sslify');
-const request = require('request');
-const { GITHUB_API_URL, GITHUB_REQUEST_OPTIONS } = require('./utils');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
@@ -31,13 +29,4 @@ app.get('*', function(req, res) {
 app.post('/api/key/github', (req, res) => {
     const key = process.env.GITHUB_API_KEY;
     res.send({ key });
-});
-
-app.post('/api/github/user', (req, res) => {
-    const key = process.env.GITHUB_API_KEY;
-});
-
-
-request(GITHUB_API_URL, GITHUB_REQUEST_OPTIONS, (res, body, error) => {
-    console.log({res, error, body});
 });

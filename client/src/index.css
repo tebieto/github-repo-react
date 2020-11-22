@@ -141,7 +141,7 @@ body {
   border-radius: 100%;
 }
 
-#sub-header {
+#tab {
   position: absolute;
   top: 70px;
   width: 100%;
@@ -151,7 +151,7 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
-#sub-header button {
+#tab button {
   margin: 5px;
   font-size: 14px;
   padding: 10px;;
@@ -167,19 +167,19 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-#sub-header button:hover {
+#tab button:hover {
   border-bottom: 2px solid rgba(128, 128, 128, 0.623);
 }
 
-#sub-header .active, #sub-header .active:hover {
+#tab .active, #tab .active:hover {
   border-bottom-color: salmon;
 }
 
-#sub-header .active .description {
+#tab .active .description {
   font-weight: bold;
 }
 
-#sub-header .count {
+#tab .count {
   margin-left: 5px;
   background-color: #ddd;
   border-radius: 25px;
@@ -199,7 +199,7 @@ body {
 }
 
 
-#contents-left {
+#profile-section {
   position: relative;
   top: -5px;
   z-index: 1;
@@ -207,7 +207,7 @@ body {
   margin: 0 20px 0 20px;
 }
 
-#contents-left .profile .avatar {
+#profile-section .profile .avatar {
   position: relative;
   width: 100%;
   border-radius: 50%;
@@ -215,7 +215,7 @@ body {
   overflow: hidden;
 }
 
-#contents-left button {
+#profile-section button {
   background-color: #fff;
   border-radius: 25px;
   position: relative;
@@ -239,46 +239,46 @@ body {
   align-self: center;
 }
 
-#contents-left button:hover {
+#profile-section button:hover {
   width:  100px;
   justify-content: space-between;
   color: rgb(0, 110, 255);
 }
 
-#contents-left button:hover #set-status{
+#profile-section button:hover #set-status{
   display: block;
 }
 
-#contents-left .avatar img{
+#profile-section .avatar img{
 border-radius: 50%;
 width: 100%;
 }
 
 
-#contents-left .profile .name{
+#profile-section .profile .name{
   font-size: 25px;
   font-weight: bold;
 }
 
-#contents-left .profile .username{
+#profile-section .profile .username{
   font-size: 18px;
   color: rgba(0, 0, 0, 0.568);
 }
 
-#contents-left .bio{
+#profile-section .bio{
   font-size: 16px;
   margin-top: -15px;
   color: rgba(0, 0, 0, 0.767);
 }
 
-#contents-right {
+#repo-section {
   position: relative;
   top: 40px;
   width: 75%;
   margin: 0 20px 0 20px;
 }
 
-#contents-right .search-repo{
+#repo-section .search-repo{
   border-bottom: 1px solid #eee;
   padding-bottom: 20px;
   display: flex;
@@ -286,19 +286,19 @@ width: 100%;
 }
 
 
-#contents-right .search-repo input{
+#repo-section .search-repo input{
   height: 30px;
   padding-left: 10px;
   outline: none;
   flex: auto;
 }
 
-#contents-right .search-repo input:focus {
+#repo-section .search-repo input:focus {
   border: 1px solid blue;
   box-shadow: 0 0 0 2px #88b8ffab;
 }
 
-#contents-right .search-repo button{
+#repo-section .search-repo button{
   height: 35px;
   background-color:  rgba(243, 239, 239, 0.582);
   outline: none;
@@ -307,29 +307,29 @@ width: 100%;
   padding: 1px 15px 1px 15px;
 }
 
-#contents-right .search-repo button:hover {
+#repo-section .search-repo button:hover {
   background-color: rgba(243, 239, 239, 0.945);
 }
 
-#contents-right .search-repo input, #contents-right .search-repo button {
+#repo-section .search-repo input, #repo-section .search-repo button {
   border: 1px solid rgb(214, 207, 207);
   border-radius: 5px;
 }
 
-#contents-right .search-repo .search-repo-btns{
+#repo-section .search-repo .search-repo-btns{
   display: flex;
   flex-direction: row;
   padding: 0;
 }
 
-#contents-right .search-repo #new-repo-btn{
+#repo-section .search-repo #new-repo-btn{
  background-color: rgb(9, 170, 9);
  color: #fff;
  border: 1px solid rgb(9, 170, 9);;
  border-radius: 5px;
 }
 
-#contents-right .search-repo #new-repo-btn:hover {
+#repo-section .search-repo #new-repo-btn:hover {
   background-color: rgba(9, 170, 9, 0.842);
 }
 
@@ -437,24 +437,24 @@ width: 100%;
       align-items: center;
   }
 
-  #contents #contents-left, #contents #contents-right {
+  #contents #profile-section, #contents #repo-section {
       position: relative;
       margin: 0;
       width: 95%;
       align-self: center;
   }
 
-  #contents-right .search-repo .flex {
+  #repo-section .search-repo .flex {
       display: none;
   }
 
-  #contents-right .search-repo {
+  #repo-section .search-repo {
       flex-direction: column;
       margin: 0;
       align-items: center;
   }
 
-  #contents-right .search-repo input {
+  #repo-section .search-repo input {
       position: relative;
       margin: 0;
       width: 98%;
@@ -463,17 +463,17 @@ width: 100%;
       padding-left: 2%;
   }
 
-  #contents-right .search-repo .search-repo-btns {
+  #repo-section .search-repo .search-repo-btns {
       width: 100%;
       margin: 0;
       justify-content: space-between;
   }
 
-  #contents-right .search-repo button {
+  #repo-section .search-repo button {
       margin: 0;
   }
 
-  #sub-header {
+  #tab {
       position: relative;
       top: 0;
       margin: 0;
@@ -482,14 +482,14 @@ width: 100%;
   }
   
 
-  #contents-left,   #contents-left .profile{
+  #profile-section,   #profile-section .profile{
       width: 100%;
       margin: 0;
       top: 0;
       left: 0;
   }
 
-  #contents-left button, #contents-left button:hover {
+  #profile-section button, #profile-section button:hover {
       position: relative;
       top: 0;
       left: 0;
@@ -504,22 +504,22 @@ width: 100%;
       margin-left: 5px;
   }
 
-  #contents-left .bio{
+  #profile-section .bio{
       margin: 0;
   }
 
-  #contents-left .profile .avatar {
+  #profile-section .profile .avatar {
       width: 80px;
       height: 80px;
   }
 
-  #contents-left .profile {
+  #profile-section .profile {
       display: flex;
       flex-direction: row;
       align-items: center;
   }
 
-  #contents-left #personal-info {
+  #profile-section #personal-info {
       margin-left: 20px;
   }
 }
