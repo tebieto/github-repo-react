@@ -15,6 +15,6 @@
 
 - Github GraphQL API
 
-### Available on github Page
+### Available on Heroku
 
-- https://tebieto.github.io/github-user-repo-demo/
+- https://demokeys.herokuapp.com/
