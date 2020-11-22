@@ -17,4 +17,4 @@
 
 ### Available on Heroku
 
-- https://demokeys.herokuapp.com/
+- https://gitprof.herokuapp.com/
