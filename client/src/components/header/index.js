@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import menuIcon from '../../assets/menu.png';
 import logoIcon from '../../assets/logo.png';
 import notificationIcon from '../../assets/notification.png';
@@ -39,5 +42,9 @@ const Header = ({ avatarUrl }) =>(
         </div>
     </div>
 );
+
+Header.prototype = {
+    avatarUrl: PropTypes.string
+}
 
 export default Header;

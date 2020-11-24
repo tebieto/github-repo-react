@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import Repo from "../repo";
 
 const Repos = ({ repos }) => (
@@ -9,5 +12,9 @@ const Repos = ({ repos }) => (
         }
     </div>
 );
+
+Repos.propTypes = {
+    repos: PropTypes.array
+}
 
 export default Repos;

@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const Repo = ({ repo }) => (
     <div className="repo">
         <div className="repo-left">
@@ -17,7 +20,7 @@ const Repo = ({ repo }) => (
                 <div className="date">{repo.updatedAt}</div>
             </div>
         </div>
-        
+
         <div className="flex"></div>
 
         <div className="star-btn">
@@ -28,5 +31,9 @@ const Repo = ({ repo }) => (
         </div>
     </div>
 );
+
+Repo.propTypes = {
+    repo: PropTypes.object
+}
 
 export default Repo;

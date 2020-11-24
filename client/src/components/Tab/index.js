@@ -1,3 +1,7 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+
 const Tab = ({ totalCount }) => (
     <div id="tab">
         <button>
@@ -15,5 +19,9 @@ const Tab = ({ totalCount }) => (
         </button>
     </div>
 );
+
+Tab.propTypes = {
+    totalCount: PropTypes.number
+}
 
 export default Tab;

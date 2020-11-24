@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const ProfileSection = ({ userInfo }) => (
     <div id="profile-section">
         <div className="profile">
@@ -16,5 +19,9 @@ const ProfileSection = ({ userInfo }) => (
         <div className="bio">{userInfo.bio}</div>
     </div>
 );
+
+ProfileSection.propTypes = {
+    userInfo: PropTypes.object
+}
 
 export default ProfileSection;

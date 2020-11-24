@@ -1,3 +1,5 @@
+import React from 'react';
+
 const SearchRepo = () => (
     <div className="search-repo">
         <input placeholder="Find a repository..." type="text"  />
