@@ -1,6 +1,6 @@
 import RepoSection from '../repo-section';
 import ProfileSection from '../profile-section';
-import Tab from '../Tab';
+import Tab from '../tab';
 
 const Contents = ({ data }) => (
     <div id="contents">
